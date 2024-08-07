@@ -7,11 +7,9 @@ import com.example.Tinder.AI.backed.Profiles.Gender;
 import com.example.Tinder.AI.backed.Profiles.Profile;
 import com.example.Tinder.AI.backed.Profiles.ProfileRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -29,6 +27,11 @@ public class TinderAiBackedApplication implements CommandLineRunner {
 	}
 
 	public void  run(String... args){
+
+		profileRepository.deleteAll();
+
+		conversationRepository.deleteAll();
+
 		Profile profile = new Profile(
 				"1",
 				"Supriyo",
