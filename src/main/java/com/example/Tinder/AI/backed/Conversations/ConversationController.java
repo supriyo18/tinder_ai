@@ -60,8 +60,15 @@ public class ConversationController {
        );
         conversation.messages().add(chatMessageWithTime);
 
+        conversationRepository.save(conversation);
         return conversation;
     }
 
+    @GetMapping("/conversations/{conversationId}")
+     public Conversation getConversation(@PathVariable String conversationId){
+        Conversation conversation =  conversationRepository.findById(conversationId)
+                .orElseThrow(()-> new ResponseStatusException(HttpStatus.NOT_FOUND,"Unable to find conversation Id"));
 
+        return conversation;
+    }
 }
