@@ -28,8 +28,6 @@ import java.util.function.Function;
 import static com.example.Tinder.AI.backed.Profiles.Utils.generateMyersBriggsTypes;
 import static com.example.Tinder.AI.backed.Profiles.Utils.selfieTypes;
 
-import static java.lang.StringTemplate.STR;
-
 @Service
 public class ProfileCreationService {
 
