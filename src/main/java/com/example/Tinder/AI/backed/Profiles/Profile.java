@@ -4,11 +4,11 @@ public record Profile(
         String id,
         String firstName,
         String lastName,
-        String bio,
-        Integer age,
-        String imageUrl,
+        int age,
         String ethnicity,
         Gender gender,
+        String bio,
+        String imageUrl,
         String myersBriggsPersonalityType
 ) {
 }
